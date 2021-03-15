@@ -1,0 +1,42 @@
+<html>
+<head>
+  	<title>teacher-result</title>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+</head>
+<body>
+	<h1>Name: {{name}}</h1>
+	<h3>time: {{time}}</h3>
+	<h3>русский: {{russian_str}}}</h3>
+	{% for type in types %}
+		
+		<table border="1" cellpadding="5" 1class="table table-bordered table-striped">
+			<tbody>
+				<tr>
+					<th class="type">type</td>
+					<th class="x">x</td>
+					<th class="y">y</td>
+					<th class="z">z</td>
+					<th class="rank">rank</td>
+					<th class="teacher">teacher.name</td>
+				</tr>
+				{% for rank  in ranks %}
+					{% if rank.type == type %}
+						<tr>
+							<td class="type">{{type.name}}</td>
+							<td class="x">{{rank.x}}</td>
+							<td class="y">{{rank.y}}</td>
+							<td class="z">{{rank.z}}</td>
+							<td class="rank">{{rank.r}}</td>
+							<td class="teacher">{{ rank.teacher.slug}}</td>
+						</tr>
+					{% endif %}
+				{% endfor %}
+			</tbody>
+		</table>
+		<p style="page-break-before: always" ></p>
+	{% endfor %}
+</body>
+</html>
+
+
+
