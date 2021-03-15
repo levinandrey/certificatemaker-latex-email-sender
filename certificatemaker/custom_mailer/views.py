@@ -8,10 +8,11 @@ from .models import Message, MessageStatus
 
 
 
+# KEY FROM UNISEMDER MAILER
 
+KEY = 'key-api-key-api-key-api-key-api'
 
-KEY = '6yr86wi5kf1a6uwmo3oeof5zgj51jpf6dd4gpkue'
-
+# LIST OF UNISENDER CONTACTS
 X = '17301581'
 
 LANG = 'ru'
